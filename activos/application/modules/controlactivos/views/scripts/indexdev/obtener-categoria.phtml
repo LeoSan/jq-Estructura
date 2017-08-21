@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+<style>
+    .navbar-inner{
+        display: none !important;
+    }
+
+    .btn-cancelar-dia{
+        font-weight: 700;
+        margin-bottom: 10px!important;
+        border-radius: 20px!important;
+    }
+
+    .tittle_iframe{
+        color: rgb(52, 120, 152);
+        font-size: x-large;
+        font-family: sans-serif;
+        padding: 10px;
+        font-weight: bold;
+        background: #E0E7EF;
+        text-align: center;
+    }
+
+    #archivo{
+        min-height: 240px;
+    }
+
+    .msjVacio{
+        font-size: 16px !important;
+        text-align: center !important;
+    }
+    .CANCELADO{
+        background: #D3D3D3;
+    //background: #EC974D;
+
+    }
+
+    .table th, .table td{
+        text-align: center!important;
+    }
+
+</style>
+
+<div>
+    <label class="tittle_iframe">Hola mundo Html <?php echo $this->dias ?> </label>
+</div>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl; ?>/js/rrhh/iframeDiasACancelar.js"></script>

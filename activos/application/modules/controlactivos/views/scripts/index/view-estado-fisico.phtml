@@ -1,0 +1,97 @@
+
+<div>
+    <label class="tittle_iframe">Catálogo Tipo Estado Físico </label>
+    <div id="msjGeneral">..</div>
+</div>
+
+<!-- Button trigger modal -->
+<div class="btn-group" role="group" aria-label="">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" > <span class="glyphicon glyphicon-plus"></span>Registrar</button>
+    <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-download-alt"></span> PDF</button>
+    <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-download-alt"></span> Excel</button>
+</div>
+
+<!-- Grilla  -->
+<div>
+    <table id="jqGridCataEstadoFisico"></table>
+    <div id="jqGridPagerCataEstadoFisico"></div>
+</div>
+
+
+<!--Libreria Jquery -->
+<link rel="stylesheet"  href="<?php echo $this->baseUrl; ?>/css/activoEstilo.css">
+<link rel="stylesheet"  href="<?php echo $this->baseUrl; ?>/lib/bootstrap3/jquery-ui.css">
+<script type="text/javascript" src="<?php echo $this->baseUrl; ?>/lib/bootstrap3/jquery.js"></script>
+
+<!-- jqModalBootstrap -->
+<link rel="stylesheet" href="<?php echo $this->baseUrl; ?>/lib/bootstrap3/bootstrap.min.css">
+<script src="<?php echo $this->baseUrl; ?>/lib/bootstrap3/bootstrap.min.js"></script>
+
+
+<!--Libreria JqGRID -->
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl; ?>/lib/jqgrid/css/ui.jqgrid.css">
+<script type="text/javascript" src="<?php echo $this->baseUrl; ?>/lib/jqgrid/js/i18n/grid.locale-es.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl; ?>/lib/jqgrid/js/jquery.jqGrid.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl; ?>/js/activos/procCataEstadoFisico.js"></script>
+
+
+<!--jqValidate-->
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl; ?>/lib/jqValidate/estilos.css">
+<script src="<?php echo $this->baseUrl; ?>/lib/jqValidate/jquery.form.js" type="text/javascript"></script>
+<script src="<?php echo $this->baseUrl; ?>/lib/jqValidate/jquery.validate.js" type="text/javascript"></script>
+
+<!-- jqDialog -->
+<link rel="stylesheet" href="<?php echo $this->baseUrl; ?>/lib/jqDialog/bootstrap-dialog.min.css">
+<script src="<?php echo $this->baseUrl; ?>/lib/jqDialog/bootstrap-dialog.min.js"></script>
+
+<!--Modal Para Registar-->
+<div class="modal fade" id="exampleModal" data-backdrop="static" data-keyboard="false"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+                <div class="modal-header">
+                    <button id="btnCerrar" name="btnCerar" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel"> <span id="spTitulomodal"> Registrar </span> Estado Físico </h4>
+                </div>
+                <div class="modal-body">
+
+                    <form id="formEstadoFisico" name="formEstadoFisico"  method="post">
+                        <!-- CAMPO Ocultos  -->
+                        <input id="inptProceso" name="inptProceso" type="hidden"  value="Guardar">
+                        <input id="inpReferencia" name="inpReferencia" type="hidden"  value="-" >
+                        <input id="inpId" name="inpId" type="hidden"  value="" >
+
+                        <div class="form-group">
+                                <label for="recipient-name" class="control-label"><span class="label-oblig">( * )</span> Nombre estado físico:</label>
+                                <div class="input-group col-sm-12">
+                                    <input id="inpNombre" name="inpNombre" maxlength="40"  type="text" class="form-control soloLetras" />
+                                </div>
+                            <!-- Componente Mesj-->
+                            <div class="error" style="display:none"> <b class="border-notch notch"></b>
+                            </div>
+                            <!-- Componente Mesj-->
+                        </div>
+                        <div class="form-group">
+                                <label for="recipient-name" class="control-label"><span class="label-oblig">( * )</span> Descripción:</label>
+                                <div class="input-group col-sm-12">
+                                    <input id="inpDescripcion" name="inpDescripcion" maxlength="40" type="text" class="form-control soloLetras" />
+                                </div>
+                            <!-- Componente Mesj-->
+                            <div class="error" style="display:none"> <b class="border-notch notch"></b>
+                            </div>
+                            <!-- Componente Mesj-->
+                        </div>
+
+                        <button id="btnGuardar" type="submit" class="btn btn-primary"><span id="bntTitulomodal"> Registrar </span> </button>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                        <span class="label-oblig-desc"> Lo campos con asteriscos(*) son obligatorios </span>
+                        <span class="label-oblig-desc msjRespuesta text-center"> </span>
+                </div>
+
+        </div>
+    </div>
+</div>
+

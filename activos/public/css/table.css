@@ -1,0 +1,24 @@
+
+.pTitle{
+	color: #7b7c80;
+	font-size: larger;
+    margin-bottom: 8px;
+}
+
+.table-striped > thead{
+	background-color: #ececec;
+}
+
+.table-striped > th{	
+    border-left-color: #eee;
+    border-right-color: #d0d0d0;
+}
+
+.container{
+	padding: 2px !important;
+}
+
+
+.table th{
+	text-align: center !important;
+}

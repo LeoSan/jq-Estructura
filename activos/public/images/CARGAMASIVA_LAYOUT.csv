@@ -1,0 +1,11 @@
+CONCEPTO,CREDITO,IMPORTE,JUSTIFICACION
+1,007400019648600155,850,Justificacion de ejemplo
+1,007400019686092748,850,Justificacion de ejemplo
+1,007400019695863589,850,Justificacion de ejemplo
+1,007400329682621924,850,Justificacion de ejemplo
+1,007400329682625431,850,Justificacion de ejemplo
+1,007400999647277326,850,Justificacion de ejemplo
+1,007400999680997196,850,Justificacion de ejemplo
+1,007400999681006002,850,Justificacion de ejemplo
+1,007400999683206505,850,In that case there is no way that it can tell which is a delimiter or enclosure and which is part of the data.
+1,007400999685188547,850,De los tipos anteriores los comunmente utilizados son: VARCHAR2 (cadenas de texto no muy grandes) DATE (fechas horas) NUMBER (números)

@@ -1,0 +1,43 @@
+
+form label.error, label.error {
+    color: red;
+    font-style: italic;
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+    background-color: bisque;
+    width: 439px;
+    padding: 5px;
+    border: 1px solid red;
+    margin-left: 10%;
+
+}
+.glyphicon-red {
+    color: red !important;
+}
+
+/*ESTO ES PARA QUITAR UN EFECTO DE LA BARRA */
+.navbar-inner{
+    display: none !important;
+}
+
+.tittle_iframe{
+    color: rgb(52, 120, 152);
+    font-size: x-large;
+    font-family: sans-serif;
+    padding: 10px;
+    font-weight: bold;
+    background: #E0E7EF;
+    text-align: center;
+}
+
+
+.table th, .table td{
+    text-align: center!important;
+}
+.panel-one{
+    background-color: #e5eaff;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}

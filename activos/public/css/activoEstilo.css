@@ -1,0 +1,63 @@
+/*Hoja de Estilo para el modulo de Activo*/
+.label-oblig{
+    color:#ff0000;
+    font-weight: bold;
+}
+
+.label-oblig-desc{
+    color:#ff0000;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.text-center{
+    text-align: center !important;
+}
+
+.hand-punter{
+    cursor: pointer;
+}
+
+.ico-red{
+    color: #990000;
+    font-weight: bold;
+    margin-left:5px;
+    margin-right:5px;
+    font-size: 14px;
+    text-align: center;
+    z-index:999;
+}
+
+.ico-blue{
+    color:#003B81;
+    font-weight: bold;
+    margin-left:5px;
+    margin-right:5px;
+    font-size: 14px;
+    text-align: center;
+    z-index:999;
+
+}
+
+
+
+/*Cosas para mejorar*/
+
+.navbar-inner{
+    display: none !important;
+}
+
+.tittle_iframe{
+    color: rgb(52, 120, 152);
+    font-size: x-large;
+    font-family: sans-serif;
+    padding: 10px;
+    font-weight: bold;
+    background: #E0E7EF;
+    text-align: center;
+}
+
+
+.table th, .table td{
+    text-align: center!important;
+}

@@ -1,0 +1,148 @@
+<style>
+	.ui-jqgrid tr.jqgrow { cursor: pointer; }
+	.modal.fade.in#modalDetail { top: 9%; }
+	.modal#modalDetail { width: 95%; left: 25%; }
+	.modal-header .close { color: #000; }
+	.container { margin: 0 18px 10px 2px!important; }
+	ul.typeahead.dropdown-menu { font-size: 10px; }
+	ul.typeahead.dropdown-menu a { line-height: 10px; }
+	.txtlabel { font-size: 12px; text-align: left; }
+	input[type="text"] { font-size: 12px; }
+	.ui-jqgrid tr.jqgrow td { white-space: initial!important; }
+</style>
+
+
+<style>
+<!--
+#archivo{
+	background-color: #ffffff !important;
+
+}
+.hasDatepicker {
+	background-color: white!important;
+    cursor: pointer!important;
+}
+/* enable absolute positioning */
+.inner-addon {
+    position: relative;
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 4px;
+  pointer-events: none;
+  top: 7px;
+}
+#divMsjXML{
+	font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+	font-size: 16px;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  6px;}
+.right-addon .glyphicon { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  24px; width: 188px; }
+.right-addon input { padding-right: 30px; }
+-->
+</style>
+<br>
+<div class="container">
+	<a class="btn" title="Buscar" id="btnSearch" href="#"><i class="icon-search"></i></a>
+	<a class="btn" title="Mostrar Filtro" id="btnMostrarFiltro" href="#">  <span class="icon-zoom-in" aria-hidden="true"></span></a>
+
+		<div class="modal fade" id="modalBusqueda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" style="display:block">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="detailModalLabel">B&uacute;squeda avanzada</h4>
+					</div>
+					<div class="modal-body">
+						<form class="formGasto" id="frmBuscarConsultaGralByParameters">
+							<label class="check">
+								<div class="span4 txtlabel">N&uacute;mero de caso</div>
+								<div class="span5"><input type="text" id="numGasto" name="numGasto" class="input-xlarge" placeholder="Caso"></div>
+							</label>
+							<label class="">
+								<div class="span4 txtlabel">Nombre de usuario&nbsp;&nbsp;</div>
+								<div class="span5"> <input type="text" autocomplete="off" id="nmuser" name="nmuser" class="input-xlarge typeahead" maxlength="25" placeholder="Usuario"> </div>
+							</label>
+							<label class="">
+								<div class="span4 txtlabel">Proveedor de gasto&nbsp;&nbsp;</div>
+								<div class="span5"> <input type="text" autocomplete="off" id="idProveedor" name="nmproveedor" class="input-xlarge typeahead" maxlength="25" placeholder="Proveedor"> </div>
+							</label>
+							<label class="">
+								<div class="span4 txtlabel">N&uacute;mero de cuenta</div>
+								<div class="span5"><input type="text" id="numCredit" name="numCredit" class="input-xlarge" placeholder="Cuenta"></div>
+							</label>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" id="btnBuscarConsultaFacturaMasivaPV" class="btn btn-primary">Buscar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="modal fade" id="modalLoading" tabindex="-1" style="display:none">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body text-center">
+						<img src="http://quantum2.pendulum.com.mx/gastosfact/public/images/loading-gears.gif">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="modal fade" id="modalDetail" tabindex="-1" style="display:none">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="text-center">
+							<img class="loading-ajax" style="display: none;" src="http://quantum2.pendulum.com.mx/gastosfact/public/images/loading-gears.gif">
+						</div>
+						<div class="modal_detalle">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-- SUBIR ARCHIVO  -->
+		<div>
+			<p>
+				<input type="file" name="file_xml" id="file_xml"/>
+				<button id="btnCargarXML">Subir XML</button>
+			</p>
+		</div>
+
+<!-- SUBIR ARCHIVO  -->
+		<div id="divMsjXML" class="alert alert-danger" role="alert">
+			<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+			<span class="sr-only">Error:</span>
+			<span id="msj_xml"> </span>
+		</div>
+
+
+		<div id="divGrid">
+			<table id="jqGridList"></table>
+			<div id="jqGridPagerList"></div>
+		</div>
+
+		<div id="divBusqueda">
+			
+
+		</div>
+
+</div>
